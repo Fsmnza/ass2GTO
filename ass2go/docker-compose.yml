@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres
+    container_name: moduleInfo
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /data/postgres
+      POSTGRES_DB: m_khalimardenDB
+    ports:
+      - "5433:5432"
+    volumes:
+      - m_khalimardenDB:/data/postgres
+volumes:
+  m_khalimardenDB:
